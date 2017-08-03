@@ -2,3 +2,7 @@ D:\Visual Studio 2010\WCF.Study.Learn\SayHelloService\bin\Debug\SayHelloService.
 D:\Visual Studio 2010\WCF.Study.Learn\SayHelloService\bin\Debug\SayHelloService.pdb
 D:\Visual Studio 2010\WCF.Study.Learn\SayHelloService\obj\Debug\SayHelloService.dll
 D:\Visual Studio 2010\WCF.Study.Learn\SayHelloService\obj\Debug\SayHelloService.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\SayHelloService\bin\Debug\SayHelloService.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\SayHelloService\bin\Debug\SayHelloService.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\SayHelloService\obj\Debug\SayHelloService.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\SayHelloService\obj\Debug\SayHelloService.pdb

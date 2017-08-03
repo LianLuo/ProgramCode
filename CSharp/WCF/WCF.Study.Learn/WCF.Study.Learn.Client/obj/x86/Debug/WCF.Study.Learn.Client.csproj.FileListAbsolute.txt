@@ -4,3 +4,10 @@ D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.Client\bin\Debug\SayHelloS
 D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.Client\bin\Debug\SayHelloService.pdb
 D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.Client\obj\x86\Debug\WCF.Study.Learn.Client.exe
 D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.Client\obj\x86\Debug\WCF.Study.Learn.Client.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.Client\bin\Debug\WCF.Study.Learn.Client.exe
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.Client\bin\Debug\WCF.Study.Learn.Client.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.Client\bin\Debug\SayHelloService.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.Client\bin\Debug\SayHelloService.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.Client\obj\x86\Debug\WCF.Study.Learn.Client.csprojResolveAssemblyReference.cache
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.Client\obj\x86\Debug\WCF.Study.Learn.Client.exe
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.Client\obj\x86\Debug\WCF.Study.Learn.Client.pdb
