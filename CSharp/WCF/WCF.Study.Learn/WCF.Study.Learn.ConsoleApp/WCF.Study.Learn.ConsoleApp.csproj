@@ -46,12 +46,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SayHelloService\WCF.Study.Learn.ServiceModule.csproj">
-      <Project>{FF7C7AA6-75CF-40D2-8702-A66B106B713C}</Project>
-      <Name>WCF.Study.Learn.ServiceModule</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
