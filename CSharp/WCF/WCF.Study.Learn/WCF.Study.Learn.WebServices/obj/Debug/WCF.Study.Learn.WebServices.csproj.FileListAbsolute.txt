@@ -1,0 +1,4 @@
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.WebServices\bin\WCF.Study.Learn.WebServices.dll
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.WebServices\bin\WCF.Study.Learn.WebServices.pdb
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.WebServices\obj\Debug\WCF.Study.Learn.WebServices.dll
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.WebServices\obj\Debug\WCF.Study.Learn.WebServices.pdb

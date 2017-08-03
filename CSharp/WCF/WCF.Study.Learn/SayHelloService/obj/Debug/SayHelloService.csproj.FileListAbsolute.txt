@@ -1,0 +1,4 @@
+D:\Visual Studio 2010\WCF.Study.Learn\SayHelloService\bin\Debug\SayHelloService.dll
+D:\Visual Studio 2010\WCF.Study.Learn\SayHelloService\bin\Debug\SayHelloService.pdb
+D:\Visual Studio 2010\WCF.Study.Learn\SayHelloService\obj\Debug\SayHelloService.dll
+D:\Visual Studio 2010\WCF.Study.Learn\SayHelloService\obj\Debug\SayHelloService.pdb

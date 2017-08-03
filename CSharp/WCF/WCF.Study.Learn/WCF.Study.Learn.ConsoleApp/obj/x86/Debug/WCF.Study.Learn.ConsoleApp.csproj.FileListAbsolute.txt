@@ -1,0 +1,7 @@
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.ConsoleApp\bin\Debug\WCF.Study.Learn.ConsoleApp.exe
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.ConsoleApp\bin\Debug\WCF.Study.Learn.ConsoleApp.pdb
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.ConsoleApp\bin\Debug\SayHelloService.dll
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.ConsoleApp\bin\Debug\SayHelloService.pdb
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.ConsoleApp\obj\x86\Debug\WCF.Study.Learn.ConsoleApp.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.ConsoleApp\obj\x86\Debug\WCF.Study.Learn.ConsoleApp.exe
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.ConsoleApp\obj\x86\Debug\WCF.Study.Learn.ConsoleApp.pdb

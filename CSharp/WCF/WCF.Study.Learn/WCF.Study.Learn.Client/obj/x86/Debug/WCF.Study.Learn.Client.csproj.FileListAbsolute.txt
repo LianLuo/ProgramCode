@@ -1,0 +1,6 @@
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.Client\bin\Debug\WCF.Study.Learn.Client.exe
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.Client\bin\Debug\WCF.Study.Learn.Client.pdb
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.Client\bin\Debug\SayHelloService.dll
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.Client\bin\Debug\SayHelloService.pdb
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.Client\obj\x86\Debug\WCF.Study.Learn.Client.exe
+D:\Visual Studio 2010\WCF.Study.Learn\WCF.Study.Learn.Client\obj\x86\Debug\WCF.Study.Learn.Client.pdb
