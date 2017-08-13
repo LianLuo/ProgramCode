@@ -6,3 +6,4 @@ G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.WebServ
 G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.WebServices\bin\WCF.Study.Learn.WebServices.pdb
 G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.WebServices\obj\Debug\WCF.Study.Learn.WebServices.dll
 G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.WebServices\obj\Debug\WCF.Study.Learn.WebServices.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.WebServices\obj\Debug\WCF.Study.Learn.WebServices.csprojResolveAssemblyReference.cache

@@ -1,0 +1,4 @@
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.FaultService\bin\Debug\WCF.Study.Learn.FaultService.exe
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.FaultService\bin\Debug\WCF.Study.Learn.FaultService.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.FaultService\obj\Debug\WCF.Study.Learn.FaultService.exe
+G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.FaultService\obj\Debug\WCF.Study.Learn.FaultService.pdb

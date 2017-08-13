@@ -10,7 +10,7 @@ namespace WCF.Study.Learn.ConsoleApp
     {
         static void Main(string[] args)
         {
-            using (var helloHost = new MyHelloHost())
+            using (var helloHost = new HelloHost())
             {
 
                 helloHost.OpenService();
