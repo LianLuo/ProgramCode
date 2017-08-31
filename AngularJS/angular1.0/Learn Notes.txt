@@ -1,0 +1,3 @@
+Angular 1.X
+angular 核心的四大特点
+MVC,模块化,指令系统,双向绑定

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="MyModule">
+<head>
+	<title>Angular 1.x Demo</title>
+	<link rel="stylesheet" type="image/x-ico" href="./images/favicon.ico">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div ng-controller="HelloAngular">
+		<p>{{greeting.text}},angular</p>
+	</div>
+	<hello></hello>
+	<div>
+		<input type="text" name="name" ng-model="greeting.name">
+		<p>{{greeting.name}},Angular</p>
+	</div>
+</body>
+<script type="text/javascript" src="./js/angular1.0.js"></script>
+<script type="text/javascript" src="./js/angular-directive.js"></script>
+</html>
