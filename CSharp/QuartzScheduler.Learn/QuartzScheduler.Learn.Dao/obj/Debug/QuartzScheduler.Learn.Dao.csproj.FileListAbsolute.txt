@@ -9,3 +9,9 @@ G:\Orginal_Csharp\ProgramCode\CSharp\QuartzScheduler.Learn\QuartzScheduler.Learn
 G:\Orginal_Csharp\ProgramCode\CSharp\QuartzScheduler.Learn\QuartzScheduler.Learn.Dao\obj\Debug\QuartzScheduler.Learn.Dao.csprojResolveAssemblyReference.cache
 G:\Orginal_Csharp\ProgramCode\CSharp\QuartzScheduler.Learn\QuartzScheduler.Learn.Dao\obj\Debug\QuartzScheduler.Learn.Dao.dll
 G:\Orginal_Csharp\ProgramCode\CSharp\QuartzScheduler.Learn\QuartzScheduler.Learn.Dao\obj\Debug\QuartzScheduler.Learn.Dao.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\QuartzScheduler.Learn\QuartzScheduler.Learn.Dao\bin\Debug\ICSharpCode.SharpZipLib.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\QuartzScheduler.Learn\QuartzScheduler.Learn.Dao\bin\Debug\NPOI.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\QuartzScheduler.Learn\QuartzScheduler.Learn.Dao\bin\Debug\NPOI.OOXML.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\QuartzScheduler.Learn\QuartzScheduler.Learn.Dao\bin\Debug\NPOI.OpenXml4Net.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\QuartzScheduler.Learn\QuartzScheduler.Learn.Dao\bin\Debug\NPOI.OpenXmlFormats.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\QuartzScheduler.Learn\QuartzScheduler.Learn.Dao\bin\Debug\NPOI.xml

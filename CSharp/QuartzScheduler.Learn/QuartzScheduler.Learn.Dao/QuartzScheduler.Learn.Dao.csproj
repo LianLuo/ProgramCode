@@ -40,6 +40,26 @@
     <Reference Include="Common.Logging.Core">
       <HintPath>libs\Common.Logging.Core.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
     <Reference Include="Quartz">
       <HintPath>libs\Quartz.dll</HintPath>
     </Reference>
@@ -52,11 +72,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelHelper.cs" />
     <Compile Include="SchedulerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="libs\" />
+    <Content Include="libs\C5.dll" />
+    <Content Include="libs\Common.Logging.Core.dll" />
+    <Content Include="libs\Common.Logging.dll" />
+    <Content Include="libs\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="libs\NPOI.dll" />
+    <Content Include="libs\NPOI.OOXML.dll" />
+    <Content Include="libs\NPOI.OpenXml4Net.dll" />
+    <Content Include="libs\NPOI.OpenXmlFormats.dll" />
+    <Content Include="libs\NPOI.XML" />
+    <Content Include="libs\Quartz.dll" />
+    <Content Include="libs\Quartz.pdb" />
+    <Content Include="libs\Quartz.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
