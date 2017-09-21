@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.MusicStore.UI", "HW.MusicStore.UI\HW.MusicStore.UI.csproj", "{EA258F2E-A27E-431A-830E-10B784C78098}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.MusicStore.Models", "HW.MusicStore.Models\HW.MusicStore.Models.csproj", "{47607721-18B7-4E3E-99E0-BAAAB0C3C25A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA258F2E-A27E-431A-830E-10B784C78098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA258F2E-A27E-431A-830E-10B784C78098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA258F2E-A27E-431A-830E-10B784C78098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA258F2E-A27E-431A-830E-10B784C78098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47607721-18B7-4E3E-99E0-BAAAB0C3C25A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47607721-18B7-4E3E-99E0-BAAAB0C3C25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47607721-18B7-4E3E-99E0-BAAAB0C3C25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47607721-18B7-4E3E-99E0-BAAAB0C3C25A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
