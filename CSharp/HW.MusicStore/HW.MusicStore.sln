@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.MusicStore.UI", "HW.Musi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.MusicStore.Models", "HW.MusicStore.Models\HW.MusicStore.Models.csproj", "{47607721-18B7-4E3E-99E0-BAAAB0C3C25A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.MusicStore.IDao", "HW.MusicStore.IDao\HW.MusicStore.IDao.csproj", "{CF3B34E3-B683-4339-93EA-9F3116C7977D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.MusicStore.Dao", "HW.MusicStore.Dao\HW.MusicStore.Dao.csproj", "{A6FCE279-1D92-46DC-BB3F-B3F713B19EAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{47607721-18B7-4E3E-99E0-BAAAB0C3C25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47607721-18B7-4E3E-99E0-BAAAB0C3C25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47607721-18B7-4E3E-99E0-BAAAB0C3C25A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF3B34E3-B683-4339-93EA-9F3116C7977D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3B34E3-B683-4339-93EA-9F3116C7977D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF3B34E3-B683-4339-93EA-9F3116C7977D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF3B34E3-B683-4339-93EA-9F3116C7977D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6FCE279-1D92-46DC-BB3F-B3F713B19EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6FCE279-1D92-46DC-BB3F-B3F713B19EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6FCE279-1D92-46DC-BB3F-B3F713B19EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6FCE279-1D92-46DC-BB3F-B3F713B19EAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

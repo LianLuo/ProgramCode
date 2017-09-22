@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace HW.MusicStore.Models
 {
-    public class Album
+    public class Album:BaseEntity
     {
-        [DisplayName("编号")]
-        public virtual int AlbumId { get; set; }
         [DisplayName("")]
         public virtual int GenreId { get; set; }
         [DisplayName("")]

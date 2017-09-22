@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace HW.MusicStore.Models
 {
-    public class Genre
+    public class Genre:BaseEntity
     {
-        public virtual int GenreId { get; set; }
         [DisplayName("流派名称")]
-        public virtual string Name { get; set; }
+        public override string Name { get; set; }
 
         public virtual  string Description { get; set; }
 

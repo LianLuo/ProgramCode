@@ -1,0 +1,9 @@
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\bin\Debug\HW.MusicStore.Dao.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\bin\Debug\HW.MusicStore.Dao.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\bin\Debug\HW.MusicStore.IDao.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\bin\Debug\HW.MusicStore.Models.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\bin\Debug\HW.MusicStore.IDao.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\bin\Debug\HW.MusicStore.Models.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\obj\Debug\HW.MusicStore.Dao.csprojResolveAssemblyReference.cache
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\obj\Debug\HW.MusicStore.Dao.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\obj\Debug\HW.MusicStore.Dao.pdb
