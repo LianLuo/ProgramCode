@@ -2,3 +2,4 @@ G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Models\bin\Debu
 G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Models\bin\Debug\HW.MusicStore.Models.pdb
 G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Models\obj\Debug\HW.MusicStore.Models.dll
 G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Models\obj\Debug\HW.MusicStore.Models.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Models\obj\Debug\HW.MusicStore.Models.csprojResolveAssemblyReference.cache

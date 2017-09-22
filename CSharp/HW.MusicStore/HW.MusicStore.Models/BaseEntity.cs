@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace HW.MusicStore.Models
 {
-    public class Artist:BaseEntity
+    public class BaseEntity
     {
-        [DisplayName("艺术家名")]
+        [DisplayName("编号")]
+        public virtual int Id { get; set; }
+
         public virtual string Name { get; set; }
     }
 }
