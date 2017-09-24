@@ -122,17 +122,21 @@ namespace HW.MusicStore.Dao
 
         public bool DeleteByCondition(string condition)
         {
-            throw new NotImplementedException();
+            return this.DeleteByCondition(condition, null);
         }
 
         public bool DeleteByCondition(string condition, DbTransaction transaction)
         {
-            throw new NotImplementedException();
+            return this.DeleteByCondition(condition, transaction, null);
         }
 
-        public bool DeleteByConidtion(string condition, DbTransaction transaction, IDbDataParameter[] parameters)
+        public bool DeleteByCondition(string condition, DbTransaction transaction, IDbDataParameter[] parameters)
         {
-            throw new NotImplementedException();
+            string query = string.Format("DELETE FROM {0} WHERE {1}",this.tableName,condition);
+
+            InternalDbSession session = DataFactory.CreateDatabase();
+            int result = session.ExecuteNonQuery(query, parameters);
+            return result > 0;
         }
 
         public bool DeleteByKey(string key)

@@ -49,7 +49,7 @@ namespace HW.MusicStore.IDao
         /// <param name="transaction"></param>
         /// <param name="parameters"></param>
         /// <returns></returns>
-        bool DeleteByConidtion(string condition, DbTransaction transaction, IDbDataParameter[] parameters);
+        bool DeleteByCondition(string condition, DbTransaction transaction, IDbDataParameter[] parameters);
 
         /// <summary>
         /// 通过指定关键字删除数据

@@ -7,3 +7,5 @@ G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\bin\Debug\H
 G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\obj\Debug\HW.MusicStore.Dao.csprojResolveAssemblyReference.cache
 G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\obj\Debug\HW.MusicStore.Dao.dll
 G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\obj\Debug\HW.MusicStore.Dao.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\bin\Debug\MySql.Data.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.MusicStore\HW.MusicStore.Dao\bin\Debug\System.Data.SQLite.dll
