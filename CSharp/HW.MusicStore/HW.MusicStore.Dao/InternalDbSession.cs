@@ -15,6 +15,10 @@ namespace HW.MusicStore.Dao
         private IDbTransaction m_DbTransaction;
         private bool m_Disposed;
 
+        /// <summary>
+        /// 初始化InternalDbSession
+        /// </summary>
+        /// <param name="conn"></param>
         public InternalDbSession(IDbConnection conn)
         {
             this.m_DbConnection = conn;
@@ -22,8 +26,14 @@ namespace HW.MusicStore.Dao
 
         private IDbCommand DBCommand { get; set; }
 
+        /// <summary>
+        /// 是否开启事务
+        /// </summary>
         public bool IsInTransaction { get; private set; }
 
+        /// <summary>
+        /// 检查对象是否已经释放
+        /// </summary>
         private void CheckDisposed()
         {
             if (this.m_Disposed)
@@ -32,6 +42,9 @@ namespace HW.MusicStore.Dao
             }
         }
 
+        /// <summary>
+        /// 激活连接
+        /// </summary>
         private void Activate()
         {
             this.CheckDisposed();
@@ -46,6 +59,9 @@ namespace HW.MusicStore.Dao
             }
         }
 
+        /// <summary>
+        /// 关闭连接
+        /// </summary>
         public void Complete()
         {
             if (this.IsInTransaction)
@@ -57,6 +73,9 @@ namespace HW.MusicStore.Dao
             }
         }
 
+        /// <summary>
+        /// 开启事务
+        /// </summary>
         public void BeginTransaction()
         {
             this.Activate();
@@ -71,6 +90,9 @@ namespace HW.MusicStore.Dao
             this.IsInTransaction = true;
         }
 
+        /// <summary>
+        /// 提交事务
+        /// </summary>
         public void CommitTransaction()
         {
             if (!this.IsInTransaction)
@@ -83,7 +105,9 @@ namespace HW.MusicStore.Dao
             this.IsInTransaction = false;
             this.Complete();
         }
-
+        /// <summary>
+        /// 事务回滚
+        /// </summary>
         public void RollbackTransaction()
         {
             if (!this.IsInTransaction)
@@ -95,7 +119,12 @@ namespace HW.MusicStore.Dao
             this.IsInTransaction = false;
             this.Complete();
         }
-
+        /// <summary>
+        /// 快速读取数据
+        /// </summary>
+        /// <param name="cmdText"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
         public IDataReader ExecuteReader(string cmdText, IDbDataParameter[] parameters)
         {
             return this.ExecuteReader(cmdText, parameters, CommandBehavior.Default, CommandType.Text);
@@ -126,6 +155,12 @@ namespace HW.MusicStore.Dao
             return reader;
         }
 
+        /// <summary>
+        /// 受影响行数
+        /// </summary>
+        /// <param name="cmdText"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
         public int ExecuteNonQuery(string cmdText, IDbDataParameter[] parameters)
         {
             return this.ExecuteNonQuery(cmdText, parameters, CommandType.Text);
@@ -152,6 +187,12 @@ namespace HW.MusicStore.Dao
             }
         }
 
+        /// <summary>
+        /// 返回查询的单行单列
+        /// </summary>
+        /// <param name="cmdText"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
         public object ExecuteScalar(string cmdText, IDbDataParameter[] parameters)
         {
             return this.ExecuteScalar(cmdText, parameters,CommandType.Text);
@@ -178,6 +219,13 @@ namespace HW.MusicStore.Dao
             }
         }
 
+        /// <summary>
+        /// 准备数据
+        /// </summary>
+        /// <param name="cmd"></param>
+        /// <param name="cmdText">SQL语句</param>
+        /// <param name="parameters">参数集</param>
+        /// <param name="commandType">操作类型</param>
         private void PrepareCommand(IDbCommand cmd, string cmdText, IDbDataParameter[] parameters, CommandType commandType)
         {
             cmd.CommandText = cmdText;
