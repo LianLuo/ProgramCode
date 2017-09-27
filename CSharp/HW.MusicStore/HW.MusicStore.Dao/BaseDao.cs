@@ -145,12 +145,53 @@ namespace HW.MusicStore.Dao
 
         public bool Insert(T entity)
         {
-            throw new NotImplementedException();
+            return this.Insert(entity, null);
         }
 
         public bool Insert(T entity, DbTransaction transaction)
         {
-            throw new NotImplementedException();
+            if (entity == null)
+            {
+                return false;
+            }
+            Hashtable hashtable = this.GetHashByEntity(entity);
+            return Insert(hashtable, transaction);
+        }
+
+        public bool Insert(Hashtable recordField, IDbTransaction transaction)
+        {
+            return Insert(recordField, tableName, transaction);
+        }
+
+        public bool Insert(Hashtable recordField, string targetTable, IDbTransaction transaction)
+        {
+            bool flag = false;
+            if (recordField != null && recordField.Count >= 1)
+            {
+                IDbDataParameter[] values = DataFactory.GetParameters(recordField.Count);
+                string fields = string.Empty;
+                string vals = string.Empty;
+                IEnumerator enumerator = recordField.Keys.GetEnumerator();
+                for (int i = 0; enumerator.MoveNext(); i++)
+                {
+                    string currentKey = enumerator.Current.ToString();
+                    fields += string.Format("[{0}],", currentKey);
+                    vals += string.Format("@{0}", currentKey);
+                    object obj = recordField[currentKey] ?? DBNull.Value;
+                    if ((obj is DateTime) && (Convert.ToDateTime(obj) <= Convert.ToDateTime("1753-1-1")))
+                    {
+                        obj = DBNull.Value;
+                    }
+                    values[i] = DataFactory.GetParameter(string.Format("@{0}", currentKey), obj);
+                }
+
+                fields = fields.Trim(new char[] {','});
+                vals = vals.Trim(new char[] {','});
+                string sql = string.Format("INSERT INTO {0} ({1}) VALUES ({2})", targetTable, fields, vals);
+                InternalDbSession session = DataFactory.CreateDatabase();
+                flag = session.ExecuteNonQuery(sql, values) > 0;
+            }
+            return flag;
         }
 
         public bool DeleteByCondition(string condition)
@@ -187,7 +228,7 @@ namespace HW.MusicStore.Dao
 
         public bool Update(T entity, string primaryKey)
         {
-            throw new NotImplementedException();
+            return Update(entity, primaryKey, null);
         }
 
         public bool Update(CommandType commandType, string sql)
@@ -197,7 +238,36 @@ namespace HW.MusicStore.Dao
 
         public bool Update(T entity, string primaryKey, DbTransaction transaction)
         {
-            throw new NotImplementedException();
+            if (entity == null)
+            {
+                return false;
+            }
+            Hashtable hashtable = GetHashByEntity(entity);
+            return Update(hashtable, transaction);
+        }
+
+        public bool Update(Hashtable recordFields, IDbTransaction transaction)
+        {
+            bool flag = false;
+            if (recordFields != null && recordFields.Count >= 1)
+            {
+                string fields = string.Empty;
+                string vals = string.Empty;
+                IDbDataParameter[] values = DataFactory.GetParameters(recordFields.Count);
+                IEnumerator enumerator = recordFields.Keys.GetEnumerator();
+                for (int i = 0; enumerator.MoveNext(); i++)
+                {
+                    string current = enumerator.Current.ToString();
+                    fields += string.Format("[{0}]=@{0},", current);
+                    object obj = recordFields[current] ?? DBNull.Value;
+                    values[i] = DataFactory.GetParameter(string.Format("@{0}", current), obj);
+                }
+                string sql = string.Format("UPDATE {0} SET {1} WHERE {2} = @ID", tableName,
+                    fields.Trim(new char[] {','}), primaryKey);
+                InternalDbSession session = DataFactory.CreateDatabase();
+                flag = session.ExecuteNonQuery(sql, values) > 0;
+            }
+            return flag;
         }
 
         public bool Update(CommandType commandType, string sql, DbTransaction transaction)
