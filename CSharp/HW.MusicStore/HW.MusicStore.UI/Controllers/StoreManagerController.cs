@@ -34,7 +34,11 @@ namespace HW.MusicStore.UI.Controllers
         [HttpPost]
         public ActionResult Modify(Album album)
         {
-            return View("Index");
+            if (ModelState.IsValid)
+            {
+                return View("Index");
+            }
+            return View(album);
         }
 
         public ActionResult Details(int id)
