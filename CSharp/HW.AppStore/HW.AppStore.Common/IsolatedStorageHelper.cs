@@ -32,47 +32,31 @@ namespace HW.AppStore.Common
             }
 
             fromDateTime = EncodingHelper.DesEncrypt(fromDateTime,SetUIConst.IsolatedStorageEncryptKey);//加密后
-            string username = fromDateTime;
             // 按照用户，域，命名空间划分独立的存储空间
             IsolatedStorageFile isolatedStorage =
                 IsolatedStorageFile.GetStore(SCEOP, null, null);
             // 查看是否有文件夹
             string[] myUserName = isolatedStorage.GetDirectoryNames(SetUIConst.IsolatedStorageDirectoryName);
-            IsolatedStorageFileStream fs = null;
             if (myUserName.Length == 0)
             {
                 isolatedStorage.CreateDirectory(SetUIConst.IsolatedStorageDirectoryName);
-                using (fs = new IsolatedStorageFileStream(SetUIConst.IsolatedStorage, FileMode.Create, isolatedStorage))
-                {
-                    using (StreamWriter writer = new StreamWriter(fs))
-                    {
-                        writer.WriteLine(fromDateTime);
-                    }
-                }
+                IsolatedStorageSave(fromDateTime,isolatedStorage,FileMode.Create);
             }
             else
             {
                 // 查看是否有文件
                 myUserName = isolatedStorage.GetFileNames(SetUIConst.IsolatedStorage);
-                if (myUserName.Length == 0)
+                IsolatedStorageSave(fromDateTime, isolatedStorage,myUserName.Length == 0 ? FileMode.Create : FileMode.Open);
+            }
+        }
+
+        private static void IsolatedStorageSave(string info,IsolatedStorageFile isolatedStorage,FileMode fileMode)
+        {
+            using (var fs = new IsolatedStorageFileStream(SetUIConst.IsolatedStorage, fileMode, isolatedStorage))
+            {
+                using (StreamWriter writer = new StreamWriter(fs))
                 {
-                    using (fs = new IsolatedStorageFileStream(SetUIConst.IsolatedStorage, FileMode.Create, isolatedStorage))
-                    {
-                        using (StreamWriter writer = new StreamWriter(fs))
-                        {
-                            writer.WriteLine(fromDateTime);
-                        }
-                    }
-                }
-                else
-                {
-                    using (fs = new IsolatedStorageFileStream(SetUIConst.IsolatedStorage, FileMode.Open, isolatedStorage))
-                    {
-                        using (StreamWriter writer = new StreamWriter(fs))
-                        {
-                            writer.WriteLine(fromDateTime);
-                        }
-                    }
+                    writer.WriteLine(info);
                 }
             }
         }
