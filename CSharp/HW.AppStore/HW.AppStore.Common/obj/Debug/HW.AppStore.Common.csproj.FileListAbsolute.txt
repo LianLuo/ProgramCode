@@ -1,0 +1,4 @@
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Common\bin\Debug\HW.AppStore.Common.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Common\bin\Debug\HW.AppStore.Common.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Common\obj\Debug\HW.AppStore.Common.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Common\obj\Debug\HW.AppStore.Common.pdb
