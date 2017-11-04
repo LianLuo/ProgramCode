@@ -33,10 +33,9 @@ namespace HW.AppStore.Common
         {
             byte[] rgbKey = null;
             byte[] rgbIV = new byte[] { 0x12, 0x34, 0x56, 120, 0x90, 0xab, 0xcd, 0xef };
-            byte[] buffer = new byte[strText.Length];
             rgbKey = Encoding.UTF8.GetBytes(saltKey.Substring(0, 8));
             DESCryptoServiceProvider provider = new DESCryptoServiceProvider();
-            buffer = Convert.FromBase64String(strText);
+            byte[] buffer = Convert.FromBase64String(strText);
             MemoryStream stream = new MemoryStream();
             CryptoStream cs = new CryptoStream(stream, provider.CreateDecryptor(rgbKey, rgbIV), CryptoStreamMode.Write);
             cs.Write(buffer, 0, buffer.Length);
