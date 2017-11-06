@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -20,9 +18,9 @@ namespace HW.AppStore.Common
                 byte[] signedData = Convert.FromBase64String(license);
                 result = rsa.VerifyData(Encoding.UTF8.GetBytes(mac), "SHA1", signedData);
             }
-            catch
+            catch(Exception e)
             {
-                
+                Debug.WriteLine(e.Message);
             }
             return result;
         }
@@ -36,10 +34,10 @@ namespace HW.AppStore.Common
                 rsa.FromXmlString(publicKey);
                 byte[] signedData = Convert.FromBase64String(license);
                 bool isToday = rsa.VerifyData(
-                    Encoding.UTF8.GetBytes(string.Format("[{0}][{1}]", mac, DateTime.Now.ToString("yyyy-MM-dd"))),
+                    Encoding.UTF8.GetBytes(string.Format("[{0}][{1:yyyy-MM-dd}]", mac, DateTime.Now)),
                     "SHA1", signedData);
                 bool matchineToday = rsa.VerifyData(
-                    Encoding.UTF8.GetBytes(string.Format("[{0}][{1}]", mac, DateTime.Now.ToString("yyyy-MM-dd"))),
+                    Encoding.UTF8.GetBytes(string.Format("[{0}][{1:yyyy-MM-dd}]", mac, DateTime.Now)),
                     "SHA1", signedData);
                 bool isForever = rsa.VerifyData(
                     Encoding.UTF8.GetBytes(string.Format("[{0}][{1}]", mac, Environment.MachineName)), "SHA1",
@@ -48,6 +46,7 @@ namespace HW.AppStore.Common
             }
             catch (Exception e)
             {
+                Debug.WriteLine(e.Message);
                 return false;
             }
         }
@@ -84,7 +83,7 @@ namespace HW.AppStore.Common
             string privateKey = GetPrivateKey();
             rsa.FromXmlString(privateKey);
             byte[] regCodeBytes = rsa.SignData(
-                Encoding.UTF8.GetBytes(string.Format("[{0}][{1}]", mac, date.ToString("yyyy-MM-dd"))), "SHA1");
+                Encoding.UTF8.GetBytes(string.Format("[{0}][{1:yyyy-MM-dd}]", mac, date)), "SHA1");
             string license = Convert.ToBase64String(regCodeBytes);
             return license;
         }
