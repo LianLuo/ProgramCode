@@ -1,8 +1,6 @@
 ﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -18,8 +16,8 @@ namespace HW.AppStore.Common
         /// <returns></returns>
         public static string GetMD5(string input,int length)
         {
-            System.Security.Cryptography.MD5 md5 = MD5.Create();
-            byte[] data = md5.ComputeHash(System.Text.Encoding.Default.GetBytes(input));
+            MD5 md5 = MD5.Create();
+            byte[] data = md5.ComputeHash(Encoding.Default.GetBytes(input));
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < data.Length; i++)
             {
@@ -44,7 +42,7 @@ namespace HW.AppStore.Common
             {
                 FileStream fs = new FileStream(path,FileMode.Open,FileAccess.Read,FileShare.Read);
                 byte[] hash = new byte[fs.Length];
-                fs.Read(hash, 0, (int) hash.Length);
+                fs.Read(hash, 0, hash.Length);
                 fs.Close();
                 string result = MD5Buffer(hash, 0, hash.Length - 32);
                 string md5 = Encoding.ASCII.GetString(hash, hash.Length - 32, 32);
@@ -52,6 +50,7 @@ namespace HW.AppStore.Common
             }
             catch (Exception e)
             {
+                Debug.WriteLine(e.Message);
                 return false;
             }
         }
@@ -82,9 +81,9 @@ namespace HW.AppStore.Common
 
         private static string MD5Buffer(byte[] streamBytes, int index, int count)
         {
-            System.Security.Cryptography.MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            var md5 = new MD5CryptoServiceProvider();
             byte[] hash = md5.ComputeHash(streamBytes, index, count);
-            string result = System.BitConverter.ToString(hash);
+            string result = BitConverter.ToString(hash);
             result = result.Replace("-", "");
             return result;
         }

@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -19,6 +18,7 @@ namespace HW.AppStore.Common
             }
             catch (Exception e)
             {
+                Debug.WriteLine(e.Message);
                 return "";
             }
         }
@@ -31,9 +31,8 @@ namespace HW.AppStore.Common
         /// <returns></returns>
         public static string DesDecrypt(string strText, string saltKey)
         {
-            byte[] rgbKey = null;
             byte[] rgbIV = new byte[] { 0x12, 0x34, 0x56, 120, 0x90, 0xab, 0xcd, 0xef };
-            rgbKey = Encoding.UTF8.GetBytes(saltKey.Substring(0, 8));
+            byte[] rgbKey = Encoding.UTF8.GetBytes(saltKey.Substring(0, 8));
             DESCryptoServiceProvider provider = new DESCryptoServiceProvider();
             byte[] buffer = Convert.FromBase64String(strText);
             MemoryStream stream = new MemoryStream();
@@ -52,9 +51,8 @@ namespace HW.AppStore.Common
         /// <returns></returns>
         public static string DesEncrypt(string strText, string saltKey)
         {
-            byte[] rgbKey = null;
             byte[] rgbIV = new byte[] { 0x12, 0x34, 0x56, 120, 0x90, 0xab, 0xcd, 0xef };
-            rgbKey = Encoding.UTF8.GetBytes(saltKey.Substring(0, 8));
+            byte[] rgbKey = Encoding.UTF8.GetBytes(saltKey.Substring(0, 8));
             DESCryptoServiceProvider provider = new DESCryptoServiceProvider();
             byte[] bytes = Encoding.UTF8.GetBytes(strText);
             MemoryStream stream = new MemoryStream();
@@ -72,6 +70,7 @@ namespace HW.AppStore.Common
             }
             catch (Exception e)
             {
+                Debug.WriteLine(e.Message);
                 return "";
             }
         }

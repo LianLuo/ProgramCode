@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.IO.IsolatedStorage;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
 
 namespace HW.AppStore.Common
 {
@@ -135,6 +133,7 @@ namespace HW.AppStore.Common
             }
             catch (Exception e)
             {
+                Debug.WriteLine(e.Message);
                 return null;
             }
         }
