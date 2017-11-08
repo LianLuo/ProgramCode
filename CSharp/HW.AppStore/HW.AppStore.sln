@@ -1,11 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.AppStore.Common", "HW.AppStore.Common\HW.AppStore.Common.csproj", "{35E14414-175B-4147-BC68-5B4713223895}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestCode", "TestCode", "{7C4BF122-85E0-44AA-94E3-50302492038F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.AppStore.Common.Test", "HW.AppStore.Common.Test\HW.AppStore.Common.Test.csproj", "{E12E7C18-A347-4FE3-A08E-6FC90D68F5C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.AppStore.Views", "HW.AppStore.Views\HW.AppStore.Views.csproj", "{70DE7611-82CA-4815-AEFD-3A30665119BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,10 @@ Global
 		{E12E7C18-A347-4FE3-A08E-6FC90D68F5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E12E7C18-A347-4FE3-A08E-6FC90D68F5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E12E7C18-A347-4FE3-A08E-6FC90D68F5C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70DE7611-82CA-4815-AEFD-3A30665119BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DE7611-82CA-4815-AEFD-3A30665119BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DE7611-82CA-4815-AEFD-3A30665119BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DE7611-82CA-4815-AEFD-3A30665119BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

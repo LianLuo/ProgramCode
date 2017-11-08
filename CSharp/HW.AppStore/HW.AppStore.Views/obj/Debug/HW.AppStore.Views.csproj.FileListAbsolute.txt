@@ -1,0 +1,9 @@
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Views\bin\Debug\HW.AppStore.Views.exe.config
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Views\bin\Debug\HW.AppStore.Views.exe
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Views\bin\Debug\HW.AppStore.Views.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Views\obj\Debug\HW.AppStore.Views.csprojResolveAssemblyReference.cache
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Views\obj\Debug\HW.AppStore.Views.MainView.resources
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Views\obj\Debug\HW.AppStore.Views.Properties.Resources.resources
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Views\obj\Debug\HW.AppStore.Views.csproj.GenerateResource.Cache
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Views\obj\Debug\HW.AppStore.Views.exe
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.AppStore\HW.AppStore.Views\obj\Debug\HW.AppStore.Views.pdb
