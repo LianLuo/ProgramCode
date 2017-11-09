@@ -6,16 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  name = "Hello world! dongliping";
-  heroes=HEROES;
+  title="My frist Angular App"
 }
 
-export class Hero{
-  id:number;
-  name:string;
-}
-
-const HEROES:Hero[] = [
-  {id:1,name:"12"},
-]
