@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{42D5B5FD-EAEB-44E1-9E77-DBF6CB538B32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.LabStore.Entity", "Entity\HW.LabStore.Entity.csproj", "{42D5B5FD-EAEB-44E1-9E77-DBF6CB538B32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
