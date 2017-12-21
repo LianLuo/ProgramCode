@@ -1,7 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.LabStore.Entity", "Entity\HW.LabStore.Entity.csproj", "{42D5B5FD-EAEB-44E1-9E77-DBF6CB538B32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.LabStore.UI", "HW.LabStore.UI\HW.LabStore.UI.csproj", "{51B4CAD7-8792-47B7-AD2C-9FFE24721444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.LabStore.Common", "HW.LabStore.Common\HW.LabStore.Common.csproj", "{0ED89428-D8D8-4019-88CD-4B8658B46B7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +19,14 @@ Global
 		{42D5B5FD-EAEB-44E1-9E77-DBF6CB538B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42D5B5FD-EAEB-44E1-9E77-DBF6CB538B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42D5B5FD-EAEB-44E1-9E77-DBF6CB538B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51B4CAD7-8792-47B7-AD2C-9FFE24721444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B4CAD7-8792-47B7-AD2C-9FFE24721444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B4CAD7-8792-47B7-AD2C-9FFE24721444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B4CAD7-8792-47B7-AD2C-9FFE24721444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ED89428-D8D8-4019-88CD-4B8658B46B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED89428-D8D8-4019-88CD-4B8658B46B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED89428-D8D8-4019-88CD-4B8658B46B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED89428-D8D8-4019-88CD-4B8658B46B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

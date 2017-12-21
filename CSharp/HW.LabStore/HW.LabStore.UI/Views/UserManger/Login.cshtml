@@ -1,0 +1,151 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>欢迎登录后台管理系统</title>
+    <link href="/Resources/css/style.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript" src="/Resources/js/jquery.js"></script>
+    <script src="/Resources/js/cloud.js" type="text/javascript"></script>
+
+    <script language="javascript">
+        $(function(){
+            $('.loginbox').css({'position':'absolute','left':($(window).width()-692)/2});
+            $(window).resize(function(){  
+                $('.loginbox').css({'position':'absolute','left':($(window).width()-692)/2});
+            })  
+        });  
+    </script> 
+
+</head>
+
+<body style="background-color:#df7611; background-image:url(/Resources/images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
+
+
+
+<div id="mainBody">
+    <div id="cloud1" class="cloud"></div>
+    <div id="cloud2" class="cloud"></div>
+</div>  
+
+
+<div class="logintop">    
+    <span>欢迎登录后台管理界面平台</span>    
+    <ul>
+        <li><a href="#">回首页</a></li>
+        <li><a href="#">帮助</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>    
+</div>
+    
+<div class="loginbody">
+    
+    <span class="systemlogo"></span> 
+       
+    <div class="loginbox loginbox3">
+        <form action="" method="post">
+        <ul>
+            <li><input id="loginuser" name="loginuser" type="text" class="loginuser" onclick="" placeholder="用户名"/></li>
+            <li><input id="loginpwd" name="loginpwd" type="password" class="loginpwd"  onclick=""/></li>
+            <li class="yzm">
+                <span><input id="vercode" name="vercode" type="text" value="验证码" onclick=""/></span><cite><img src="" style="width: 135px;height: 46px"/></cite> 
+            </li>
+            <li><input name="loginbtn" id="loginbtn" type="button" class="loginbtn" value="登录"  onclick=""  /><label><input id="reminduser" name="" type="checkbox" value="" checked="checked" />记住密码</label><label><a href="#">忘记密码？</a></label></li>
+        </ul>
+        </form>
+    
+    </div>
+    
+</div>
+    
+    
+<div class="loginbm">版权所有  2014  <a href="#"></a> </div>
+	
+<script type="text/javascript">
+    $(document).ready(function() {
+        if(getCookie("remindUser") === "true") {
+            $("#reminduser").prop("checked", true);
+            $("#loginuser").val($.cookie("loginuser"));
+            $("#loginpwd").val($.cookie("loginpwd"));
+        }
+
+        $("#loginbtn").click(function() {
+            if (check()) {
+                login();
+            }
+        });
+    });
+
+    function save() {
+        if (document.getElementById("reminduser").checked) {
+            var username = $("#loginuser").val();
+            var password = $("#loginpwd").val();
+            setCookie("remindUser", "true", 7 * 4000);
+            setCookie("loginuser", username, 7 * 4000);
+            setCookie("loginpwd", password, 7 * 4000);
+        } else {
+            setCookie("remindUser", "false", -1);
+            setCookie("loginuser", "", -1);
+            setCookie("loginpwd", "", -1);
+        }
+    };
+
+    function check() {
+        var username = $("#loginuser").val();
+        var password = $("#loginpwd").val();
+        var vcode = $("#vercode").val();
+        if (username === "") {
+            $("#loginuser").focus();
+            return false;
+        }
+
+        if (password === "") {
+            $("#loginpwd").focus();
+            return false;
+        }
+
+        if (vcode === "") {
+            $("#vercode").focus();
+            return false;
+        }
+        return true;
+    };
+
+    function login() {
+        $.ajax({
+            type: 'POST',
+            url: '/UserManger/Login',
+            data: { username: $("#loginuser").val(), pwd: $("#loginpwd").val(), vcode: $("#vercode").val()},
+            dataType: 'json',
+            success:function(r) {
+                if (r.success) {
+                    save();
+                    console.log("AAA");
+                } else {
+                    $("form").reset();
+                }
+            }
+        });
+    };
+    function setCookie(name, val, date) {
+        var exp = new Date();
+        exp.setTime(exp.getTime() + date * 24 * 60 * 60 * 1000);
+        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+    }
+
+    function getCookie(name) {
+        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+        if (arr = document.cookie.match(reg)) {
+            return unescape(arr[2]);
+        }
+        return null;
+    }
+</script>
+</body>
+
+</html>
+
