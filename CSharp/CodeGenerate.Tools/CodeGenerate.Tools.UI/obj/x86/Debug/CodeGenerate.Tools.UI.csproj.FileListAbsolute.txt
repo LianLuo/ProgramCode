@@ -1,0 +1,7 @@
+G:\Orginal_Csharp\ProgramCode\CSharp\CodeGenerate.Tools\CodeGenerate.Tools.UI\bin\Debug\CodeGenerate.Tools.UI.exe
+G:\Orginal_Csharp\ProgramCode\CSharp\CodeGenerate.Tools\CodeGenerate.Tools.UI\bin\Debug\CodeGenerate.Tools.UI.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\CodeGenerate.Tools\CodeGenerate.Tools.UI\obj\x86\Debug\CodeGenerate.Tools.UI.MainView.resources
+G:\Orginal_Csharp\ProgramCode\CSharp\CodeGenerate.Tools\CodeGenerate.Tools.UI\obj\x86\Debug\CodeGenerate.Tools.UI.Properties.Resources.resources
+G:\Orginal_Csharp\ProgramCode\CSharp\CodeGenerate.Tools\CodeGenerate.Tools.UI\obj\x86\Debug\CodeGenerate.Tools.UI.csproj.GenerateResource.Cache
+G:\Orginal_Csharp\ProgramCode\CSharp\CodeGenerate.Tools\CodeGenerate.Tools.UI\obj\x86\Debug\CodeGenerate.Tools.UI.exe
+G:\Orginal_Csharp\ProgramCode\CSharp\CodeGenerate.Tools\CodeGenerate.Tools.UI\obj\x86\Debug\CodeGenerate.Tools.UI.pdb
