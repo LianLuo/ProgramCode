@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LabStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_Admins">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="254" />
+    <Property Name="AdminTel" Type="char" MaxLength="15" />
+    <Property Name="Office" Type="varchar" MaxLength="254" />
+    <Property Name="OfficeTel" Type="varchar" MaxLength="254" />
+    <Property Name="UserPwd" Type="varchar" MaxLength="254" />
+    <Property Name="Remark" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="T_Buildings">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="BuildingName" Type="varchar" MaxLength="254" />
+    <Property Name="BuildingNum" Type="varchar" MaxLength="254" />
+    <Property Name="AreaGUID" Type="varchar" MaxLength="254" />
+    <Property Name="Position" Type="varchar" MaxLength="254" />
+    <Property Name="Responsibility" Type="varchar" MaxLength="254" />
+    <Property Name="ResponsibilityTel" Type="char" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="T_Labs">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="254" />
+    <Property Name="CreateTime" Type="int" />
+    <Property Name="PersonGUID" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="T_StoreCab">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="CabName" Type="varchar" MaxLength="254" />
+    <Property Name="CabNum" Type="varchar" MaxLength="254" />
+    <Property Name="BuildingGUID" Type="varchar" MaxLength="254" />
+    <Property Name="LabPosition" Type="varchar" MaxLength="254" />
+    <Property Name="LabDescrip" Type="varchar" MaxLength="254" />
+    <Property Name="Responsibility" Type="varchar" MaxLength="254" />
+    <Property Name="ResponsibilityTel" Type="char" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="T_Students">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="254" />
+    <Property Name="UserPwd" Type="varchar" MaxLength="254" />
+    <Property Name="UserNum" Type="varchar" MaxLength="254" />
+    <Property Name="Grade" Type="varchar" MaxLength="254" />
+    <Property Name="Profession" Type="varchar" MaxLength="254" />
+    <Property Name="TopicID" Type="varchar" MaxLength="254" />
+    <Property Name="LabGUID" Type="varchar" MaxLength="254" />
+    <Property Name="DepartGUID" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="T_Teachers">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="254" />
+    <Property Name="UserPwd" Type="varchar" MaxLength="254" />
+    <Property Name="UserNum" Type="varchar" MaxLength="254" />
+    <Property Name="Office" Type="varchar" MaxLength="254" />
+    <Property Name="OfficeTel" Type="varchar" MaxLength="254" />
+    <Property Name="TopicID" Type="varchar" MaxLength="254" />
+    <Property Name="LabGUID" Type="varchar" MaxLength="254" />
+    <Property Name="DepartGUID" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="T_Topics">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="254" />
+    <Property Name="CreateTime" Type="int" />
+    <Property Name="PersonGUID" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityContainer Name="LabStoreModelStoreContainer">
+    <EntitySet Name="T_Admins" EntityType="Self.T_Admins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Buildings" EntityType="Self.T_Buildings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Labs" EntityType="Self.T_Labs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_StoreCab" EntityType="Self.T_StoreCab" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Students" EntityType="Self.T_Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Teachers" EntityType="Self.T_Teachers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Topics" EntityType="Self.T_Topics" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

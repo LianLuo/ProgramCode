@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <grade>
+    <item></item>
+  </grade>
+  <!-- 性别 -->
+  <gender>
+    <item>男</item>
+    <item>女</item>
+    <item>未知</item>
+  </gender>
+  <Area>
+    
+  </Area>
+</objects>

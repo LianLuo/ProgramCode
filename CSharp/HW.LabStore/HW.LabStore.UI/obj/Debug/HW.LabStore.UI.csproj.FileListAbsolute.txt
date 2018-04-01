@@ -71,3 +71,4 @@ G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.UI\bin\zh-Hans\Syst
 G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.UI\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.UI\obj\Debug\HW.LabStore.UI.dll
 G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.UI\obj\Debug\HW.LabStore.UI.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.UI\obj\Debug\HW.LabStore.UI.csprojResolveAssemblyReference.cache

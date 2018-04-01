@@ -1,0 +1,5 @@
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.UT\bin\Debug\HW.LabStore.UT.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.UT\obj\Debug\HW.LabStore.UT.csprojResolveAssemblyReference.cache
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.UT\obj\Debug\HW.LabStore.UT.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.UT\bin\Debug\HW.LabStore.UT.exe
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.UT\obj\Debug\HW.LabStore.UT.exe

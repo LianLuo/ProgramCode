@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LabStoreModelStoreContainer" CdmEntityContainer="LabStoreEntities">
+    <EntitySetMapping Name="T_Admins">
+      <EntityTypeMapping TypeName="LabStoreModel.T_Admins">
+        <MappingFragment StoreEntitySet="T_Admins">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AdminTel" ColumnName="AdminTel" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="OfficeTel" ColumnName="OfficeTel" />
+          <ScalarProperty Name="UserPwd" ColumnName="UserPwd" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Buildings">
+      <EntityTypeMapping TypeName="LabStoreModel.T_Buildings">
+        <MappingFragment StoreEntitySet="T_Buildings">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="BuildingName" ColumnName="BuildingName" />
+          <ScalarProperty Name="BuildingNum" ColumnName="BuildingNum" />
+          <ScalarProperty Name="AreaGUID" ColumnName="AreaGUID" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Responsibility" ColumnName="Responsibility" />
+          <ScalarProperty Name="ResponsibilityTel" ColumnName="ResponsibilityTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Labs">
+      <EntityTypeMapping TypeName="LabStoreModel.T_Labs">
+        <MappingFragment StoreEntitySet="T_Labs">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="PersonGUID" ColumnName="PersonGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_StoreCab">
+      <EntityTypeMapping TypeName="LabStoreModel.T_StoreCab">
+        <MappingFragment StoreEntitySet="T_StoreCab">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="CabName" ColumnName="CabName" />
+          <ScalarProperty Name="CabNum" ColumnName="CabNum" />
+          <ScalarProperty Name="BuildingGUID" ColumnName="BuildingGUID" />
+          <ScalarProperty Name="LabPosition" ColumnName="LabPosition" />
+          <ScalarProperty Name="LabDescrip" ColumnName="LabDescrip" />
+          <ScalarProperty Name="Responsibility" ColumnName="Responsibility" />
+          <ScalarProperty Name="ResponsibilityTel" ColumnName="ResponsibilityTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Students">
+      <EntityTypeMapping TypeName="LabStoreModel.T_Students">
+        <MappingFragment StoreEntitySet="T_Students">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPwd" ColumnName="UserPwd" />
+          <ScalarProperty Name="UserNum" ColumnName="UserNum" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+          <ScalarProperty Name="LabGUID" ColumnName="LabGUID" />
+          <ScalarProperty Name="DepartGUID" ColumnName="DepartGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Teachers">
+      <EntityTypeMapping TypeName="LabStoreModel.T_Teachers">
+        <MappingFragment StoreEntitySet="T_Teachers">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPwd" ColumnName="UserPwd" />
+          <ScalarProperty Name="UserNum" ColumnName="UserNum" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="OfficeTel" ColumnName="OfficeTel" />
+          <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+          <ScalarProperty Name="LabGUID" ColumnName="LabGUID" />
+          <ScalarProperty Name="DepartGUID" ColumnName="DepartGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Topics">
+      <EntityTypeMapping TypeName="LabStoreModel.T_Topics">
+        <MappingFragment StoreEntitySet="T_Topics">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="PersonGUID" ColumnName="PersonGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
