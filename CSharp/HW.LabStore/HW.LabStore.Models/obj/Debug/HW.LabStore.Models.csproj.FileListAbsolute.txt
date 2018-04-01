@@ -1,0 +1,11 @@
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.Models\bin\Debug\HW.LabStore.Models.dll.config
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.Models\bin\Debug\HW.LabStore.Models.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.Models\bin\Debug\HW.LabStore.Models.pdb
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.Models\bin\Debug\EntityFramework.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.Models\bin\Debug\EntityFramework.SqlServer.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.Models\bin\Debug\EntityFramework.xml
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.Models\bin\Debug\EntityFramework.SqlServer.xml
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.Models\bin\Debug\zh-Hans\EntityFramework.resources.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.Models\obj\Debug\HW.LabStore.Models.csprojResolveAssemblyReference.cache
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.Models\obj\Debug\HW.LabStore.Models.dll
+G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\HW.LabStore.Models\obj\Debug\HW.LabStore.Models.pdb
