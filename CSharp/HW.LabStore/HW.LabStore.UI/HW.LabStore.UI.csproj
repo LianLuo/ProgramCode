@@ -440,6 +440,20 @@
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entity\HW.LabStore.Entity.csproj">
+      <Project>{42d5b5fd-eaeb-44e1-9e77-dbf6cb538b32}</Project>
+      <Name>HW.LabStore.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HW.LabStore.BusinessModel\HW.LabStore.BusinessModel.csproj">
+      <Project>{2163d98e-5542-4814-ae1b-d16725ac9698}</Project>
+      <Name>HW.LabStore.BusinessModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HW.LabStore.Common\HW.LabStore.Common.csproj">
+      <Project>{0ed89428-d8d8-4019-88cd-4b8658b46b7e}</Project>
+      <Name>HW.LabStore.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

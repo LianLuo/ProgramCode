@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace HW.LabStore.UT
 {
@@ -40,6 +42,24 @@ namespace HW.LabStore.UT
             {
                 connection.Close();
             }
+        }
+    }
+
+    public class Utilities
+    {
+        public static bool AbortTx()
+        {
+            Console.WriteLine("Abort the Transaction (y/n)?");
+            var inputs = Console.ReadLine();
+            inputs = inputs ?? "";
+            return inputs.ToLower().Equals("y");
+        }
+
+        public static void DisplayTransactionInformation(string title, TransactionInformation ti)
+        {
+            Contract.Requires<ArgumentException>(ti != null);
+            Console.WriteLine("{0}\r\nCreation Time:{1}\r\nStatus:{2}\r\nLocal ID:{3}\r\nDistributed ID:{4}", title,
+                ti.CreationTime, ti.Status, ti.LocalIdentifier, ti.DistributedIdentifier);
         }
     }
 }
