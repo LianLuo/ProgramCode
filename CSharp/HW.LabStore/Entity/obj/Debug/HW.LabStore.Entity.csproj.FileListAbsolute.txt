@@ -1,6 +1,0 @@
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\Entity\bin\Debug\GradeConfig.xml
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\Entity\bin\Debug\Entity.dll
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\Entity\bin\Debug\Entity.pdb
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\Entity\obj\Debug\HW.LabStore.Entity.csprojResolveAssemblyReference.cache
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\Entity\obj\Debug\Entity.dll
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.LabStore\Entity\obj\Debug\Entity.pdb
