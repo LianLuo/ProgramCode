@@ -13,5 +13,25 @@ namespace HW.LabStore.BusinessModel
         {
             get { return new mallStoreEntities();}
         }
+
+        public string GetApprovingAuthorityRemark(int projectId,int projectBudgetId)
+        {
+            return string.Empty;
+        }
+
+        public string GetCCEmailInfo(int flowId)
+        {
+            return string.Empty;
+        }
+
+        public IEnumerable<object> GetToUserEmailInfo(int flowId)
+        {
+            return null;
+        }
+
+        public void SetRProjectInfo()
+        {
+            
+        }
     }
 }
