@@ -27,5 +27,33 @@ namespace HW.LabStore.UI.Controllers
             mode.IntermediateResult.NetHeader = "Variance (Proposed - latest BL)";
             return View(mode);
         }
+
+        public ActionResult FlexGrid()
+        {
+            var model = GetData(20);
+            return View(model);
+        }
+
+        private IEnumerable<UserModel> GetData(int count)
+        {
+            var random = new Random();
+            var data = Enumerable.Range(0, count).Select(p =>
+            {
+                return new UserModel()
+                {
+                    Age = p,
+                    Birthday = DateTime.Now,
+                    Email = "xxx.gmail.com",
+                    Gender = p%2 == 0,
+                    ID = p,
+                    InTime = DateTime.Now.AddYears(-1),
+                    QQ = ((int)(random.NextDouble() * 1000)).ToString(),
+                    Tel = "12345678",
+                    UserName = "XXOO"
+                };
+
+            });
+            return data;
+        }
     }
 }

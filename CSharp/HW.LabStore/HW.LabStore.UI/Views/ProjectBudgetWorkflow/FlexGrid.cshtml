@@ -1,0 +1,37 @@
+﻿@using C1.Web.Mvc.Fluent
+@using HW.LabStore.Entity
+@model IEnumerable<UserModel>
+@{
+    ViewBag.Title = "FlexGrid";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Scripts/wijmo.style.css")
+@Scripts.Render("~/Scripts/WebResources.js")
+@Scripts.Render("~/Scripts/wijmo.min.js")
+<script type="text/javascript">
+    function userGridItemFormatter(panel, r, c, cell) {
+        
+    }
+</script>
+<div>
+    @(Html.C1().FlexGrid<UserModel>()
+      .AutoGenerateColumns(false)
+      .Bind(p=>p.Bind(Model))
+      .Height("400px")
+      .CssClass("grid")
+      .Id("userGrid")
+      .Columns(columns =>
+      {
+          columns.Add(column => column.Binding("ID").Header("Id").Visible(false));
+          columns.Add(column => column.Binding("UserName").Header("User Name"));
+          columns.Add(column => column.Binding("Gender").Header("Gender"));
+          columns.Add(column => column.Binding("Age").Header("User Age"));
+          columns.Add(column => column.Binding("Email").Header("User Email"));
+          columns.Add(column => column.Binding("Tel").Header("User Telphone"));
+          columns.Add(column => column.Binding("QQ").Header("User lync"));
+          columns.Add(column => column.Binding("Birthday").Header("Birthday").Format("dd-MMM-yyyy"));
+          columns.Add(column => column.Binding("InTime").Header("In Company Date").Format("dd-MMM-yyyy"));
+      }).ItemFormatter("userGridItemFormatter")
+    )
+</div>
+

@@ -53,6 +53,7 @@
     <Compile Include="ViewModels\ApprovalIntermediateRemark.cs" />
     <Compile Include="ViewModels\ApprovalIntermediateResult.cs" />
     <Compile Include="ViewModels\ApprovalWorkflowModel.cs" />
+    <Compile Include="ViewModels\UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="GradeConfig.xml">

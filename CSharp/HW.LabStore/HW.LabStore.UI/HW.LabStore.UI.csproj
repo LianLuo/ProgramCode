@@ -45,6 +45,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="C1.Web.Mvc, Version=4.0.20171.114, Culture=neutral, PublicKeyToken=9b75583953471eea, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\C1.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Web.Mvc.FlexViewer, Version=4.0.20171.114, Culture=neutral, PublicKeyToken=9b75583953471eea, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\C1.Web.Mvc.FlexViewer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -156,6 +164,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="libs\C1.Web.Mvc.dll" />
+    <Content Include="libs\C1.Web.Mvc.FlexViewer.dll" />
+    <Content Include="libs\C1.Web.Mvc.FlexViewer.XML" />
+    <Content Include="libs\C1.Web.Mvc.XML" />
     <Content Include="Resources\css\select.css" />
     <Content Include="Resources\css\style.css" />
     <Content Include="Resources\editor\kindeditor.js" />
@@ -396,6 +408,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jq.resizableColumns.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -403,9 +416,14 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jszip.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebResources.js" />
+    <Content Include="Scripts\wijmo.min.css" />
+    <Content Include="Scripts\wijmo.min.js" />
+    <Content Include="Scripts\wijmo.style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -422,6 +440,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\UserManger\Login.cshtml" />
     <Content Include="Views\ProjectBudgetWorkflow\SubmitForRequired.cshtml" />
+    <Content Include="Views\ProjectBudgetWorkflow\FlexGrid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -455,6 +474,9 @@
       <Project>{0ed89428-d8d8-4019-88cd-4b8658b46b7e}</Project>
       <Name>HW.LabStore.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
