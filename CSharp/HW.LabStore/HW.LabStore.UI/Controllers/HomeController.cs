@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HW.LabStore.Common;
 
 namespace HW.LabStore.UI.Controllers
 {
@@ -10,6 +11,7 @@ namespace HW.LabStore.UI.Controllers
     {
         public ActionResult Index()
         {
+            LogHelper.Info("Home/Index");
             return View();
         }
 
