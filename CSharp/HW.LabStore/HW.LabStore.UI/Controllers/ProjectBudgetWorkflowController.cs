@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using C1.Web.Mvc;
+using C1.Web.Mvc.Serialization;
 using HW.LabStore.Entity;
 
 namespace HW.LabStore.UI.Controllers
@@ -28,10 +30,31 @@ namespace HW.LabStore.UI.Controllers
             return View(mode);
         }
 
+        private IEnumerable<UserModel> UserInfos
+        {
+            get
+            {
+                if (Session[CommonConstants.SessionConst.UserNameInfo] == null)
+                {
+                    return new List<UserModel>();
+                }
+                else
+                {
+                    return Session[CommonConstants.SessionConst.UserNameInfo] as IEnumerable<UserModel>;
+                }
+            }
+            set { Session[CommonConstants.SessionConst.UserNameInfo] = value; }
+        }
+
         public ActionResult FlexGrid()
         {
-            var model = GetData(20);
-            return View(model);
+            if (this.UserInfos == null || !this.UserInfos.Any())
+            {
+                var model = GetData(20);
+                UserInfos = model;
+            }
+            
+            return View(UserInfos);
         }
 
         private IEnumerable<UserModel> GetData(int count)
@@ -42,11 +65,11 @@ namespace HW.LabStore.UI.Controllers
                 return new UserModel()
                 {
                     Age = p,
-                    Birthday = DateTime.Now,
+                    Birthday = DateTime.Now.ToString("dd-MMM-yyy"),
                     Email = "xxx.gmail.com",
                     Gender = p%2 == 0,
                     ID = p,
-                    InTime = DateTime.Now.AddYears(-1),
+                    InTime = DateTime.Now.AddYears(-1).ToString("dd-MMM-yyy"),
                     QQ = ((int)(random.NextDouble() * 1000)).ToString(),
                     Tel = "12345678",
                     UserName = "XXOO"
@@ -54,6 +77,96 @@ namespace HW.LabStore.UI.Controllers
 
             });
             return data;
+        }
+
+        public ActionResult UpdateUserInfo([C1JsonRequest]CollectionViewEditRequest<UserModel> requestData)
+        {
+            var allData = this.UserInfos.ToList();
+            return this.C1Json(CollectionViewHelper.Edit<UserModel>(requestData, item =>
+            {
+                string error = string.Empty;
+                bool success = true;
+                try
+                {
+                    var currentItem = allData.FirstOrDefault(p => p.ID == item.ID);
+                    allData.Remove(currentItem);
+                    if (currentItem != null)
+                    {
+                        currentItem.Age = item.Age;
+                        currentItem.Birthday = item.Birthday;
+                        currentItem.Email = item.Email;
+                        currentItem.Gender = item.Gender;
+                        currentItem.InTime = item.InTime;
+                        currentItem.QQ = item.QQ;
+                        currentItem.Tel = item.Tel;
+                        currentItem.UserName = item.UserName;
+                        allData.Add(currentItem);
+                    }
+                    this.UserInfos = allData;
+                }
+                catch (Exception e)
+                {
+                    error = e.Message;
+                    success = false;
+                }
+                return new CollectionViewItemResult<UserModel>
+                {
+                    Error = error,
+                    Success = success,
+                    Data = item
+                };
+
+            },() => this.UserInfos));
+        }
+
+        public ActionResult CreateUserInfo([C1JsonRequest] CollectionViewEditRequest<UserModel> requestData)
+        {
+            return this.C1Json(CollectionViewHelper.Edit<UserModel>(requestData, item =>
+            {
+                string error = string.Empty;
+                bool success = true;
+                try
+                {
+                    item.ID = this.UserInfos.Max(p => p.ID) + 1;
+                    this.UserInfos.ToList().Add(item);
+                }
+                catch (Exception e)
+                {
+                    error = e.Message;
+                    success = false;
+                }
+                return new CollectionViewItemResult<UserModel>
+                {
+                    Error = error,
+                    Success = success,
+                    Data = item
+                };
+            }, () => this.UserInfos));
+        }
+
+        public ActionResult DeleteUserInfo([C1JsonRequest] CollectionViewEditRequest<UserModel> requestData)
+        {
+            return this.C1Json(CollectionViewHelper.Edit<UserModel>(requestData, item =>
+            {
+                string error = string.Empty;
+                bool success = true;
+                try
+                {
+                    var resultItem = this.UserInfos.ToList().Find(u => u.ID == item.ID);
+                    this.UserInfos.ToList().Remove(resultItem);
+                }
+                catch (Exception e)
+                {
+                    error = e.Message;
+                    success = false;
+                }
+                return new CollectionViewItemResult<UserModel>
+                {
+                    Error = error,
+                    Success = success,
+                    Data = item
+                };
+            }, () => this.UserInfos));
         }
     }
 }
