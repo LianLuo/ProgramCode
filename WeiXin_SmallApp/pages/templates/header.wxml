@@ -1,0 +1,7 @@
+<template name='header1'>
+  this is template 1 - {{text}}
+</template>
+
+<template name='header2'>
+  this is template 2- {{text}}
+</template>

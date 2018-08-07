@@ -1,0 +1,39 @@
+<include src='../templates/_layout' ></include>
+
+<import src="../templates/header"/>
+<template is='header1' data='{{text:"ABCDEF"}}' />
+
+This is my Home page.
+<button type='default' hover-class='other-button-hover'> default</button>
+<button type='primary' bindtap='btnClick'>{{btnText}}</button>
+<text>{{text}}</text>
+<!-- 条件标签 -->
+<view wx:if='{{isShow}}'>
+  {{text}} 1
+</view>
+<view wx:else>
+  {{text}} 2
+</view>
+
+<!-- 循环标签 -->
+<view wx:for="{{['A','B','C','D']}}">
+text {{item}}-{{index}}
+</view>
+<view wx:for="{{['A','B','C','D']}}" wx:for-item="indexs" wx:for-index='ix'>
+text {{indexs}}-{{ix}}
+</view>
+<!-- 模版标签 -->
+<!-- 绑定 和 事件 -->
+<!--
+使用bindtap 事件触发，逐步往上触发，
+使用catchtap 事件触发，仅仅触发自身的事件。不会进行冒泡事件触发。
+-->
+<view class='view1' bindtap='clickView1'>
+  View 1
+  <view class='view2' bindtap='clickView2'>
+    View 2
+    <view class='view3' catchtap='clickView3'>
+      View 3
+    </view>
+  </view>
+</view>

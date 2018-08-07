@@ -1,0 +1,10 @@
+<view class='container'>
+  <input placeholder="please input export number." bindinput='input' class='txtInput'  />
+  <button type="default" bindtap='btnSearch'> Search </button>
+  <scroll-view scroll-y='true' style='height:200px;'>
+    <view wx:for='{{expressInfos}}'>
+    {{item.context}}-[{{item.time}}]
+    </view>
+  </scroll-view>
+  
+</view>
