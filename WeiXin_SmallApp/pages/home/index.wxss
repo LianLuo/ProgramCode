@@ -1,0 +1,17 @@
+.view1{
+  height: 800rpx;
+  width: 100%;
+  background-color: #c3c3c3;
+}
+
+.view2{
+  height: 600rpx;
+  width: 80%;
+  background-color: #abcdef;
+}
+
+.view3{
+  height: 400rpx;
+  width: 60%;
+  background-color: #fff;
+}
