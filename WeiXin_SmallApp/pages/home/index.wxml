@@ -37,3 +37,29 @@ text {{indexs}}-{{ix}}
     </view>
   </view>
 </view>
+<!--
+跳转有两种方式进行：
+1.wx.redirectTo({
+  url:'../logs/log?id=1'
+});
+跳转到其他页面后，可以返回回去；
+2.wx.navigateTo({
+  url:'../logs/log?id=1'
+});
+跳转到其他页面后，点击返回没有效果。
+页面跳转同样也是
+1. <view bindtap='itemClick(id)'>xxxxx</view>
+itemClick : function(id){
+    wx.redirectTo({
+    url:'../logs/log?id='+id
+  })
+}
+
+2. 
+<navigator url='../logs/log?id=100'> 
+  <view >xxxxx</view>
+</navigator>
+
+要想采用navigator来实现navigateTo的效果，那么我只需要在navigator添加一个'redirect'属性即可。
+
+-->

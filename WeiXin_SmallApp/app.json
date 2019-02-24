@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/home/searchExport",
     "pages/home/index",
-    "pages/index/index",
     "pages/logs/logs"
     
   ],
@@ -11,5 +11,33 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  }
+  ,
+  "tabBar": {
+    "color": "#ABCDEF",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "Home",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "Move",
+      "iconPath": "images/clapperboard.png",
+      "selectedIconPath": "images/clapperboard_open.png"
+    },{
+      "pagePath": "pages/home/searchExport",
+      "text": "Email",
+      "iconPath": "images/mail.png",
+      "selectedIconPath": "images/mail_new.png"
+    }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
   }
 }
