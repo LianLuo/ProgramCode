@@ -1,9 +1,0 @@
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.OSS.RandomPoint\HW.OSS.RandomPoint.Views\bin\Debug\HW.OSS.RandomPoint.Views.exe.config
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.OSS.RandomPoint\HW.OSS.RandomPoint.Views\bin\Debug\HW.OSS.RandomPoint.Views.exe
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.OSS.RandomPoint\HW.OSS.RandomPoint.Views\bin\Debug\HW.OSS.RandomPoint.Views.pdb
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.OSS.RandomPoint\HW.OSS.RandomPoint.Views\obj\x86\Debug\HW.OSS.RandomPoint.Views.Properties.Resources.resources
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.OSS.RandomPoint\HW.OSS.RandomPoint.Views\obj\x86\Debug\HW.OSS.RandomPoint.Views.csproj.GenerateResource.Cache
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.OSS.RandomPoint\HW.OSS.RandomPoint.Views\obj\x86\Debug\HW.OSS.RandomPoint.Views.exe
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.OSS.RandomPoint\HW.OSS.RandomPoint.Views\obj\x86\Debug\HW.OSS.RandomPoint.Views.pdb
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.OSS.RandomPoint\HW.OSS.RandomPoint.Views\obj\x86\Debug\HW.OSS.RandomPoint.Views.MainForm.resources
-G:\Orginal_Csharp\ProgramCode\CSharp\HW.OSS.RandomPoint\HW.OSS.RandomPoint.Views\bin\Debug\favicon.ico

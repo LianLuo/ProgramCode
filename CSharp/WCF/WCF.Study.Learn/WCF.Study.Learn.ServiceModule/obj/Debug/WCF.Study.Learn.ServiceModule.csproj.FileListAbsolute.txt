@@ -1,4 +1,0 @@
-G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.ServiceModule\bin\Debug\WCF.Study.Learn.ServiceModule.dll
-G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.ServiceModule\bin\Debug\WCF.Study.Learn.ServiceModule.pdb
-G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.ServiceModule\obj\Debug\WCF.Study.Learn.ServiceModule.dll
-G:\Orginal_Csharp\ProgramCode\CSharp\WCF\WCF.Study.Learn\WCF.Study.Learn.ServiceModule\obj\Debug\WCF.Study.Learn.ServiceModule.pdb
