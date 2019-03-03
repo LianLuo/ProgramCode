@@ -1,0 +1,7 @@
+<!--pages/user/user.wxml-->
+<view class='index-container'>
+  <image src='/images/uc.jpg'/>
+  <view class='nickname'>
+    user center {{username}}
+  </view>
+</view>

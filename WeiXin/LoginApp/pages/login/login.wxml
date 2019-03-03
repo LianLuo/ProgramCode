@@ -1,0 +1,30 @@
+<!--pages/login/login.wxml-->
+<view class='mcontainer'>
+  <view class='item'>
+    <!--<image src='/images/logo.png' class='image'/>-->
+  </view>
+  <view class='item'>
+    <view class='login-item'>
+      <view class='login-item-info'>User Name</view>
+      <view><input bindinput='usernameInput'/></view>
+    </view>
+    <view class='login-item'>
+      <view class='login-item-info'>User Password</view>
+      <view class='login-pwd'>
+        <input style='flex-grow:1' password='true' bindinput='passwordInput'/>
+        <text>forgot password?</text>
+      </view>
+    </view>
+
+    <view class='login-item button'>
+      <button class='login-btn' bindtap='btnClick'>Login</button>
+    </view>
+  </view>
+
+  <view class='item bottom-info'>
+    <view>New to manage?<text>create a account</text></view>
+    <view class='wechat-icon'>
+      <!--<image src='/images/wechat.png'/>-->
+    </view>
+  </view>
+</view>
