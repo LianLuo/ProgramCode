@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component One Demo</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../contents/bootstrap.min.css">
+    <link rel="stylesheet" href="../contents/wijmo.min.css">
+    <link rel="stylesheet" href="../contents/app.css">
+
+    <!-- bootstrap js -->
+    <script type="text/javascript" src="../javascripts/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="../javascripts/wijmo.min.js"></script>
+    <script type="text/javascript" src="../javascripts/wijmo.input.min.js"></script>
+    <script type="text/javascript" src="../javascripts/wijmo.grid.min.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <b>First grid for flexGrid</b>
+    <div  id="gsFlexGrid"></div>
+
+    <b>Initialize Method</b>
+    <div id="cdInitMethod"></div>
+
+    <b>Column definitions for flexGrid</b>
+    <div id="cdColsCollection"></div>
+
+    <b>Selection Module</b>
+    <div id="smFlexGrid"></div>
+    <select id="smMenu">
+        <option value="None">None</option>
+        <option value="Cell">Cell</option>
+        <option value="CellRange" selected>CellRange</option>
+        <option value="Row">Row</option>
+        <option value="RowRange">RowRange</option>
+        <option value="ListBox">ListBox</option>
+    </select>
+
+    <br/>
+    <b>Group for flexGrid</b>
+    <div id="gFlexGrid"></div>
+    <select id="gMenu">
+        <option value="" selected>(no grouping)</option>
+        <option value="country">Country</option>
+        <option value="amount">Revenue</option>
+        <option value="date">Date</option>
+        <option value="country,date">Country and Date</option>
+        <option value="country,amount">Country and Revenue</option>
+        <option value="country,date,amount">Country, Date, and Revenue</option>
+    </select>
+
+    <script type="text/javascript" src="../javascripts/GridApp.js"></script>
+</body>
+</html>
