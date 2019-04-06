@@ -20,65 +20,78 @@
     </style>
 </head>
 <body>
-    <b>First grid for flexGrid</b>
-    <div  id="gsFlexGrid"></div>
-
-    <b>Initialize Method</b>
-    <div id="cdInitMethod"></div>
-
-    <b>Column definitions for flexGrid</b>
-    <div id="cdColsCollection"></div>
-
-    <b>Selection Module</b>
-    <div id="smFlexGrid"></div>
-    <select id="smMenu">
-        <option value="None">None</option>
-        <option value="Cell">Cell</option>
-        <option value="CellRange" selected>CellRange</option>
-        <option value="Row">Row</option>
-        <option value="RowRange">RowRange</option>
-        <option value="ListBox">ListBox</option>
-    </select>
-
-    <br/>
-    <b>Group for flexGrid</b>
-    <div id="gFlexGrid"></div>
-    <select id="gMenu">
-        <option value="" selected>(no grouping)</option>
-        <option value="country">Country</option>
-        <option value="amount">Revenue</option>
-        <option value="date">Date</option>
-        <option value="country,date">Country and Date</option>
-        <option value="country,amount">Country and Revenue</option>
-        <option value="country,date,amount">Country, Date, and Revenue</option>
-    </select>
-
-    <br/>
-    <div id="fFlexGrid"></div>
-    <div class="input-group">
-        <span class="input-group-addon">
-            <i class="glyphicon glyphicon-filter"></i>
-        </span>
-        <input id="fFilter" type="text" class="form-control" placeholder="filter by Country ..."/>
+    <div class="col-sm-12">
+        <div class="col-sm-4">
+            <b>First grid for flexGrid</b>
+            <div  id="gsFlexGrid"></div>
+        </div>
+        <div class="col-sm-4">
+            <b>Initialize Method</b>
+            <div id="cdInitMethod"></div>
+        </div>
+        <div class="col-sm-4">
+            <b>Column definitions for flexGrid</b>
+            <div id="cdColsCollection"></div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="col-sm-4">
+            <b>Selection Module</b>
+            <div id="smFlexGrid"></div>
+            <select id="smMenu">
+                <option value="None">None</option>
+                <option value="Cell">Cell</option>
+                <option value="CellRange" selected>CellRange</option>
+                <option value="Row">Row</option>
+                <option value="RowRange">RowRange</option>
+                <option value="ListBox">ListBox</option>
+            </select>
+        </div>
+        <div class="col-sm-4">
+            <b>Group for flexGrid</b>
+            <div id="gFlexGrid"></div>
+            <select id="gMenu">
+                <option value="" selected>(no grouping)</option>
+                <option value="country">Country</option>
+                <option value="amount">Revenue</option>
+                <option value="date">Date</option>
+                <option value="country,date">Country and Date</option>
+                <option value="country,amount">Country and Revenue</option>
+                <option value="country,date,amount">Country, Date, and Revenue</option>
+            </select>
+        </div>
+        <div class="col-sm-4">
+            <div id="fFlexGrid"></div>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-filter"></i>
+                </span>
+                <input id="fFilter" type="text" class="form-control" placeholder="filter by Country ..."/>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="col-sm-4">
+            <b>pagination</b>
+            <div id="pFlexGrid" style="height: auto;"></div>
+            <div class="btn-group" id="pPager">
+                <button type="button" class="btn btn-default" data-action="fast-backward" id="pfb">
+                    <span class="glyphicon glyphicon-fast-backward"></span>
+                </button>
+                <button type="button" class="btn btn-default" data-action="step-backward" id="psb">
+                    <span class="glyphicon glyphicon-step-backward"></span>
+                </button>
+                <button type="button" class="btn btn-default" disabled style="width:100px" data-action="none" id="pn"></button>
+                <button type="button" class="btn btn-default" data-action="step-forward" id="psf">
+                    <span class="glyphicon glyphicon-step-forward"></span>
+                </button>
+                <button type="button" class="btn btn-default" data-action="fast-forward" id="pff">
+                    <span class="glyphicon glyphicon-fast-forward"></span>
+                </button>
+            </div>
+        </div>
     </div>
 
-    <b>pagination</b>
-    <div id="pFlexGrid" style="height: auto;"></div>
-    <div class="btn-group" id="pPager">
-        <button type="button" class="btn btn-default" data-action="fast-backward" id="pfb">
-            <span class="glyphicon glyphicon-fast-backward"></span>
-        </button>
-        <button type="button" class="btn btn-default" data-action="step-backward" id="psb">
-            <span class="glyphicon glyphicon-step-backward"></span>
-        </button>
-        <button type="button" class="btn btn-default" disabled style="width:100px" data-action="none" id="pn"></button>
-        <button type="button" class="btn btn-default" data-action="step-forward" id="psf">
-            <span class="glyphicon glyphicon-step-forward"></span>
-        </button>
-        <button type="button" class="btn btn-default" data-action="fast-forward" id="pff">
-            <span class="glyphicon glyphicon-fast-forward"></span>
-        </button>
-    </div>
 
 </body>
 <script type="text/javascript" src="../javascripts/GridApp.js"></script>
