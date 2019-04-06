@@ -94,9 +94,9 @@ var ggrid = new wijmo.grid.FlexGrid('#gFlexGrid'),
 ggrid.initialize({
     autoGenerateColumns:false,
     columns:[
-        { header: 'Country', binding: 'country', width: '*' },
-        { header: 'Date', binding: 'date' },
-        { header: 'Revenue', binding: 'amount', format: 'n0' }
+        { header: 'Country', binding: 'country', width: 220 },
+        { header: 'Date', binding: 'date',format:'MMM-dd-yyyy' },
+        { header: 'Revenue', binding: 'amount', format: 'n0' ,width:90}
     ],
     itemsSource:cv
 });
