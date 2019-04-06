@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component One FlexChart Demo</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../contents/bootstrap.min.css">
+    <link rel="stylesheet" href="../contents/wijmo.min.css">
+    <link rel="stylesheet" href="../contents/chartApp.css">
+
+    <!-- bootstrap js -->
+    <script type="text/javascript" src="../javascripts/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="../javascripts/wijmo.min.js"></script>
+    <script type="text/javascript" src="../javascripts/wijmo.input.min.js"></script>
+    <script type="text/javascript" src="../javascripts/wijmo.chart.min.js"></script>
+
+    <style type="text/css">
+        .wj-flexchart {
+            background-color: white;
+            box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.75);
+            height: 400px;
+            margin-bottom: 12px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="col-md-12">
+        <div class="col-md-3">
+            <b>getting start chart</b>
+            <div id="gettingStartChart"></div>
+        </div>
+        <div class="col-md-3">
+            <b>chart type</b>
+            <div id="chartTypes"></div>
+            <select id="typeMenu">
+                <option value="0" selected="selected">Column</option>
+                <option value="1">Bar</option>
+                <option value="2">Scatter</option>
+                <option value="3">Line</option>
+                <option value="4">LineSymbols</option>
+                <option value="5">Area</option>
+                <option value="9">Spline</option>
+                <option value="10">SplineSymbols</option>
+                <option value="11">SplineArea</option>
+            </select>
+            <select id="stackingMenu">
+                <option value="0" selected="selected">None</option>
+                <option value="1">Stacked</option>
+                <option value="2">Stacked 100%</option>
+            </select>
+            <select id="rotatedMenu">
+                <option value="false" selected="selected">False</option>
+                <option value="true">True</option>
+            </select>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" charset="utf-8">
+    var countries = 'US,Germany,UK,Japan,Italy,Greece'.split(','),
+        appData = [],funnelData = [],boxPlotterData=[],sales = 10000;
+    for(var i=0;i<countries.length;i++){
+        appData.push({
+            country:countries[i],
+            downloads:Math.round(Math.random() * 20000),
+            sales:Math.random() * 10000,
+            expenses:Math.random() * 5000
+        });
+
+        funnelData.push({
+            country:countries[i],
+            sales:sales
+        });
+
+        boxPlotterData.push({
+            country:countries[i],
+            downloads: [getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData()],
+            sales: [getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData()],
+            expenses: [getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData(), getData()]
+        });
+        sales = sales - Math.round(Math.random() * 2000);
+    }
+
+    function getData()
+    {
+        return Math.round(Math.random() * 100);
+    }
+
+
+
+
+    // getting start chart
+    var gettingStartChart = new wijmo.chart.FlexChart('#gettingStartChart');
+    gettingStartChart.initialize({
+        itemsSource:appData,
+        bindingX:'country',
+        series:[
+            { name: 'Sales', binding: 'sales' },
+            { name: 'Expenses', binding: 'expenses' },
+            { name: 'Downloads', binding: 'downloads' }
+        ]
+    });
+
+    // chart of type.
+    var chartTypes = new wijmo.chart.FlexChart('#chartTypes'),
+        typeMenu = new wijmo.input.Menu("#typeMenu"),
+        stackingMenu = new wijmo.input.Menu('#stackingMenu'),
+        rotatedMenu = new wijmo.input.Menu('#rotatedMenu');
+
+    chartTypes.initialize({
+        itemsSource:appData,
+        bindingX:'country',
+        series:[
+            {
+                name: 'Sales',
+                binding: 'sales',
+                style:{
+                    fill:'green',
+                    stroke:'darkgreen',
+                    strokeWidth:1
+                },
+                //visibility:wijmo.chart.SeriesVisibility.Visible
+            },
+            {
+                name: 'Expenses',
+                binding: 'expenses',
+                style:{
+                    fill:'red',
+                    stroke:'darkred',
+                    strokeWidth:1
+                },
+                //visibility:wijmo.chart.SeriesVisibility.Visible
+            },
+            {
+                name:'Downloads',
+                binding:'downloads',
+                style:{
+                    fill:'orange',
+                    strokeWidth:5
+                },
+                symbolStyle:{
+                    fill:'gold',
+                    stroke:'gold'
+                },
+                //visibility:wijmo.chart.SeriesVisibility.Legend//wijmo.chart.SeriesVisibility.Visible
+            }
+        ],
+        header:'Sample Chart',
+        footer:'copyright (C) ComponentOne',
+        axisY:{
+            title:'amount',
+            axisLine:true,
+            majorGrid:true,
+            max:15000,
+            format:'c0',
+            //majorUnit:20,
+        },
+        axisX:{
+            title:'country',
+            axisLine:true,
+            majorGrid:true
+        },
+        legend:{
+            position:1//non-0,left-1,top-2,right-3,bottom-4
+        },
+        tooltip:{
+            content:'<img src="../images/{x}.png"/><b>{seriesName}</b><br/>{y}'
+        },
+        //selectionMode:wijmo.chart.SelectionMode.series
+    });
+
+    updateMenuHeader(typeMenu,'Chart Type');
+    updateMenuHeader(stackingMenu,'Stacking');
+    updateMenuHeader(rotatedMenu,'Rotated');
+
+    typeMenu.selectedIndexChanged.addHandler(function(){
+        if(typeMenu.selectedValue){
+            chartTypes.chartType = parseInt(typeMenu.selectedValue);
+            updateMenuHeader(typeMenu,'Chart Type');
+        }
+    });
+
+    stackingMenu.selectedIndexChanged.addHandler(function(){
+        if(stackingMenu.selectedValue)
+        {
+            // update flexChart's stacking property.
+            chartTypes.stacking = parseInt(stackingMenu.selectedValue);
+            // update menu header.
+            updateMenuHeader(stackingMenu,'Stacking');
+        }
+
+    });
+
+    rotatedMenu.selectedIndexChanged.addHandler(function(){
+        if(rotatedMenu.selectedValue)
+        {
+            // specify if chart should be rotated or not.
+            chartTypes.rotated = rotatedMenu.selectedValue === 'true';
+
+            // update menu header.
+            updateMenuHeader(rotatedMenu,'Rotated');
+        }
+    });
+
+    function updateMenuHeader(menu,prefix){
+        menu.header = '<b>'+prefix+'</b>:'+menu.text;
+    }
+</script>
+</html>
