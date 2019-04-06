@@ -61,6 +61,25 @@
         </span>
         <input id="fFilter" type="text" class="form-control" placeholder="filter by Country ..."/>
     </div>
+
+    <b>pagination</b>
+    <div id="pFlexGrid" style="height: auto;"></div>
+    <div class="btn-group" id="pPager">
+        <button type="button" class="btn btn-default" data-action="fast-backward" id="pfb">
+            <span class="glyphicon glyphicon-fast-backward"></span>
+        </button>
+        <button type="button" class="btn btn-default" data-action="step-backward" id="psb">
+            <span class="glyphicon glyphicon-step-backward"></span>
+        </button>
+        <button type="button" class="btn btn-default" disabled style="width:100px" data-action="none" id="pn"></button>
+        <button type="button" class="btn btn-default" data-action="step-forward" id="psf">
+            <span class="glyphicon glyphicon-step-forward"></span>
+        </button>
+        <button type="button" class="btn btn-default" data-action="fast-forward" id="pff">
+            <span class="glyphicon glyphicon-fast-forward"></span>
+        </button>
+    </div>
+
 </body>
 <script type="text/javascript" src="../javascripts/GridApp.js"></script>
 </html>
