@@ -136,3 +136,22 @@ function updateGMenuHeader()
 {
     gMenu.header = '<b>Group By:</b> ' + gMenu.text;
 }
+
+
+// filter for flexGrid
+// create grid, some data
+var grid = new wijmo.grid.FlexGrid('#fFlexGrid'),
+    cv = new wijmo.collections.CollectionView(appData.getData(100)),
+    filterEl = document.getElementById('fFilter'),
+    filterText = '';
+
+grid.itemsSource = cv;
+
+filterEl.addEventListener('input',function(){
+    filterText = this.value.toLowerCase();
+    cv.refresh();
+});
+
+cv.filter = function(item){
+    return !filterText || item.country.toLowerCase().indexOf(filterText) > -1;
+}
