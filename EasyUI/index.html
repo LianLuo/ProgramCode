@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="./contents/YBslider.css" rel="stylesheet">
+        <style type="text/css">
+            body{
+                background-color:#000;
+                color:#999999;
+                font:12px/1.618 Tahoma,"microsoft yahei";
+                margin:0
+            }
+            .web{
+                font-size:18px;
+                color:#fff;
+                position:absolute;
+                z-index:99;
+                top:170px;
+                right: 1em;
+            }
+            .web a{
+                color:#fff;
+                margin-right: 2em;
+            }
+            h2{
+                font:900 16px/20px "microsoft yahei";
+                background-color:#080808;
+                display:inline-block;
+                border:1px solid #333;
+                padding:5px;
+                color:#333
+            }
+            * html h2{
+                display:inline
+            }
+            *+html h2{
+                display:inline
+            }
+            .test-bg{
+                position:absolute;
+                height:200px;
+                width:100%;
+                /*background:url(http://www.yaoboweb.com/images/grid-bg.png)*/
+            }
+            #test{
+                position:relative;
+                height:200px;
+                font:900 12px/190px "microsoft yahei";
+                overflow:hidden;
+                white-space:nowrap;
+                border:1px solid #333;
+                background-color:#32a6a6;
+                text-align:center
+            }
+            label{
+                display:inline-block;
+                width:4em;
+                text-align:right
+            }
+            .box{
+                white-space:nowrap
+            }
+            ul{
+                list-style:none;
+                margin:0;
+                padding:0
+            }
+            .inline-b{
+                display:inline-block;
+                vertical-align:top;
+                min-width:400px;
+                margin-right:40px
+            }
+            * html .inline-b{
+                display:inline
+            }
+            *+html .inline-b{
+                display:inline
+            }
+            li{
+                margin-bottom:20px
+            }
+        </style>
+    </head>
+    <body>
+        <input class="slider-inp" setValue="255,0,10" setValueSuf="整体调整，注意对调了参数" />
+        <div class="box">
+            <div class="inline-b">
+                <h2>UI扩展案例（二）</h2>
+                <ul>
+                    <li>
+                        <label>透明度</label>
+                        <span id="ui_test_2"></span></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+<script type="text/javascript" src="./javascripts/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="./javascripts/YBSlider.js"></script>
+<script type="text/javascript" src="./javascripts/app.js"></script>
+</html>
