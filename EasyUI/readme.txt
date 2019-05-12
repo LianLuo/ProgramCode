@@ -1,1 +1,3 @@
-学习EasyUI项目代码
+Learn Easyui.
+1. study base knowledge
+2. add demo.
