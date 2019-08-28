@@ -242,3 +242,7 @@ grid.initialize({
 });
 
  */
+
+ new CustomerGridEditor(grid,'date',wijmo.inputDate,{
+     format:'dd-MMM-yyyy'
+ })
